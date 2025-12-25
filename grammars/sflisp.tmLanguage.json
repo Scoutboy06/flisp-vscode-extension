@@ -1,0 +1,123 @@
+{
+  "name": "SFlisp",
+  "scopeName": "source.sflisp",
+  "fileTypes": [
+    "sflisp"
+  ],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#labels"
+    },
+    {
+      "include": "#directives"
+    },
+    {
+      "include": "#instructions"
+    },
+    {
+      "include": "#registers"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#characters"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#identifiers"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "match": ";.*$",
+          "name": "comment.line.semicolon.sflisp"
+        }
+      ]
+    },
+    "labels": {
+      "patterns": [
+        {
+          "match": "^\\s*([A-Za-z_][A-Za-z0-9_]*):",
+          "captures": {
+            "1": {
+              "name": "entity.name.label.sflisp"
+            }
+          }
+        }
+      ]
+    },
+    "directives": {
+      "patterns": [
+        {
+          "match": "\\b(ORG|EQU|FCB|FCS|RMB)\\b",
+          "name": "keyword.directive.sflisp"
+        }
+      ]
+    },
+    "instructions": {
+      "patterns": [
+        {
+          "match": "\\b(PSHA|PSHX|PSHY|PSHC|PULA|PULX|PULY|PULC|TFR|BSR|BRA|BMI|BPL|BEQ|BNE|BVS|BVC|BCS|BLO|BCC|BHS|STX|STY|STSP|JMP|JSR|CLR|NEG|INC|DEC|TST|RTS|RTI|LDX|LDY|LDSP|SBCA|SUBA|ADCA|ADDA|CMPA|BITA|ANDA|NOP|LDA|ANDCC|STA|ORCC|CLRA|NEGA|INCA|DECA|TSTA|COMA|BHI|COM|ORA|LSLA|BLS|LSL|EORA|LSRA|BGT|LSR|CMPX|LEAX|ROLA|BGE|ROL|CMPY|LEAY|RORA|BLE|ROR|CMPSP|LEASP|ASRA|BLT|ASR|EXG)\\b",
+          "name": "keyword.mnemonic.sflisp"
+        }
+      ]
+    },
+    "registers": {
+      "patterns": [
+        {
+          "match": "\\b(A|X|Y|CC|SP)\\b",
+          "name": "variable.language.register.sflisp"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "\\$[0-9A-Fa-f]+",
+          "name": "constant.numeric.hex.sflisp"
+        },
+        {
+          "match": "%[01]+",
+          "name": "constant.numeric.binary.sflisp"
+        },
+        {
+          "match": "\\b[0-9]+\\b",
+          "name": "constant.numeric.decimal.sflisp"
+        }
+      ]
+    },
+    "characters": {
+      "patterns": [
+        {
+          "match": "'[^']'",
+          "name": "constant.character.sflisp"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "begin": "\"",
+          "end": "\"",
+          "name": "string.quoted.double.sflisp"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+          "name": "variable.other.sflisp"
+        }
+      ]
+    }
+  }
+}

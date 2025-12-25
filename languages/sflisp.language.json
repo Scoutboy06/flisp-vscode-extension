@@ -1,0 +1,11 @@
+{
+  "id": "sflisp",
+  "extensions": [
+    ".sflisp"
+  ],
+  "aliases": [
+    "Flisp Assembly",
+    "sflisp"
+  ],
+  "configuration": "./"
+}
