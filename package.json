@@ -15,14 +15,10 @@
     "languages": [
       {
         "id": "sflisp",
-        "aliases": [
-          "Flisp Assembly",
-          "sflisp"
-        ],
         "extensions": [
           ".sflisp"
         ],
-        "configuration": "./languages/sflisp.languages.json"
+        "configuration": "./languages/sflisp.language.json"
       }
     ],
     "grammars": [

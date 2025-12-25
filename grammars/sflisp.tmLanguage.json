@@ -9,6 +9,12 @@
       "include": "#comments"
     },
     {
+      "include": "#strings"
+    },
+    {
+      "include": "#characters"
+    },
+    {
       "include": "#labels"
     },
     {
@@ -22,12 +28,6 @@
     },
     {
       "include": "#numbers"
-    },
-    {
-      "include": "#characters"
-    },
-    {
-      "include": "#strings"
     },
     {
       "include": "#identifiers"
